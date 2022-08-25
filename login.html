@@ -6,13 +6,50 @@
     <title>Title</title>
 
     <script src="../../jquery-3.6.0.min.js"></script>
+    <script src="../../JQuery插件/validate表单验证/jquery-validate.js"></script>
+    <script src="js/login.js"></script>
     <link rel="stylesheet" href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
 </head>
-<style>
-
-</style>
 <body>
+    <!-- logo-->
+    <div class="logo"><img src="./images/logo.png" alt=""></div>
+    <!--登录区-->
+    <div class="login_register">
+        <span  class="error" ></span>
+
+    <!-- 登录form -->
+        <form action=""  class="login-box active" style="display: none">
+            <div class="title"><img src="./images/login_title.png" alt=""></div>
+            <div class="username">
+                <i class="iconfont icon-yonghu"></i>
+                <input type="text" data-pattern="" name="username" placeholder="请输入用户名"></div>
+            <div class="password">
+                <i class="iconfont icon-mima"></i>
+                <input type="text"  name="password" placeholder="请输入密码"></div>
+            <button type="submit">登录</button>
+            <div class="link_reg"><a href="#" >注册</a></div>
+        </form>
+    <!-- 注册form-->
+        <form action="" style="display: none" class="reg-box">
+            <div class="title"><img src="./images/login_title.png" alt=""></div>
+            <div class="username">
+                <i class="iconfont icon-yonghu"></i>
+                <input type="text"  name="username" placeholder="请输入用户名"
+                data-describedby="user-error" data-required
+                data-description="username"
+                ></div>
+            <div class="password">
+                <i class="iconfont icon-mima"></i>
+                <input type="text"  name="password" placeholder="请输入密码"></div>
+            <div class="repeat-password">
+                <i class="iconfont icon-mima"></i>
+                <input type="text"   placeholder="请再次输入密码"></div>
+            <button type="submit">注册</button>
+            <div class="link_login"><a href="#" >登录</a></div>
+        </form>
+    </div>
 
 </body>
 </html>
