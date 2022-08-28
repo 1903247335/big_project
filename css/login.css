@@ -6,6 +6,7 @@ html {
   height: 100%;
 }
 body {
+  overflow: hidden;
   background: url(../images/login_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,6 +51,33 @@ a {
 }
 .login_register {
   position: relative;
+}
+.mouseenter {
+  background: #4d5463;
+  color: white;
+}
+.mouseenter a {
+  color: white!important;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+dd {
+  margin: 0;
+}
+iframe {
+  border: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+h4 {
+  margin: 0;
 }
 .logo {
   margin-left: 70px;

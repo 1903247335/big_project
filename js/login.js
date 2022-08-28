@@ -1,5 +1,5 @@
 $.ajaxPrefilter(function (res) {
-    res.url='http://www.liulongbin.top:3007'+res.url
+    res.url='http://www.liulongbin.top:3007'+res.url//设置默认路径
 })
 $(function () {
     $('input').val('')
@@ -16,6 +16,21 @@ $(function () {
                     [0].reset()
     })
 })
+
+//用于身份识别
+$(function () {
+    function jump_link() {
+        alert('您已经登录')
+        location.href='http://localhost:63342/python/save/%E4%BD%9C%E5%93%81/web/%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B/%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE/index.html'
+    }
+    $.ajax({type:'GET',url:'/my/userinfo',headers:{Authorization:localStorage.getItem('token')},success:function (res) {
+            res['status']===0?jump_link():res
+        }})
+})
+
+
+
+
 
 //用于登录
 $(function () {
@@ -42,9 +57,18 @@ $(function () {
             data:$('.login-box').serialize(),
             success:function (res) {
                 if (res.status!==0){
+                    alert('hh')
                     $('.error').text(res.message).fadeIn(1000,function () {$(this).fadeOut(2000)})
+
+
                 }
-                else {$('.error').text(res.message).fadeIn(1000,function () {$(this).fadeOut(2000)})}
+                else {
+                    localStorage.setItem('token',res["token"])
+                    $('.error').text(res.message).fadeIn(1000,function () {$(this).fadeOut(2000,function () {
+                        location.href='http://localhost:63342/python/save/%E4%BD%9C%E5%93%81/web/%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B/%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE/index.html'
+                    })
+
+                    })}
             }
             
         })}
@@ -56,7 +80,7 @@ $(function () {
 
 $(function () {
     $('.reg-box').on('submit',function (event) {
-        event.preventDefault()
+        event.preventDefault()//阻止跳转
         let username=$('.reg-box .username input')
         let password=$('.reg-box .password input')
         let repassword=$('.reg-box .repeat-password input')
@@ -99,6 +123,7 @@ $(function () {
                     }
                     else {
                         $('.error').text(res.message).fadeIn(1000,function () {$(this).fadeOut(2000)})
+
                     }
                     }})
 

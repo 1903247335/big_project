@@ -6,6 +6,7 @@ html {
   height: 100%;
 }
 body {
+  overflow: hidden;
   background: url(../images/login_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,5 +51,248 @@ a {
 }
 .login_register {
   position: relative;
+}
+.mouseenter {
+  background: #4d5463;
+  color: white;
+}
+.mouseenter a {
+  color: white!important;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+dd {
+  margin: 0;
+}
+iframe {
+  border: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+body {
+  background: none;
+}
+.hover-active {
+  background: #4d5463;
+}
+.hover-active i {
+  color: #bbfafa !important;
+}
+.hover-active span {
+  color: #bbfafa !important;
+}
+.hover-active dl {
+  display: block!important;
+}
+.now-place {
+  background: #4d5463;
+  background: #008688 !important;
+}
+.now-place i {
+  color: #bbfafa !important;
+}
+.now-place span {
+  color: #bbfafa !important;
+}
+.now-place dl {
+  display: block!important;
+}
+dl {
+  width: 100%;
+}
+header {
+  padding: 10px 30px;
+  background: #22262c;
+  color: #9e9f9d;
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top .user-operation {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-right: 25px;
+}
+header .top .person {
+  width: 150px;
+  margin-right: 60px;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  z-index: 9;
+}
+header .top .person .link_center {
+  color: white;
+}
+header .top .person .person-center {
+  background: white;
+  margin-top: 10px;
+  display: none;
+}
+header .top .person .person-center a {
+  display: block;
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+}
+header .top .person .mouse a {
+  display: inline-block;
+}
+header .top .person img {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+header .top .person a {
+  margin-bottom: 0;
+}
+header .top .person i {
+  color: #9b9fa3;
+}
+header .top .btn i {
+  font-size: 20px;
+  color: #9e9f9d !important;
+}
+header .top .btn a {
+  color: #9e9f9d;
+}
+.main {
+  display: flex;
+  height: 100%;
+}
+.main aside {
+  background: #373d47;
+  flex: 2;
+}
+.main aside .top {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  text-align: center;
+}
+.main aside .head-portrait {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main aside .head-portrait img {
+  width: 100%;
+  height: 100%;
+}
+.main ul span {
+  float: left;
+  color: #909da8;
+}
+.main ul span i {
+  font-size: 20px;
+}
+.main li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+.main li > a {
+  float: left;
+  margin-bottom: 0!important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #909da8;
+  font-weight: bold;
+}
+.main li > a span {
+  margin-left: 30px;
+}
+.main li > a > i {
+  float: right;
+}
+.main li dl {
+  float: left;
+  display: none;
+  line-height: 28px;
+}
+.main li dl dd a {
+  display: block;
+  padding: 10px 40px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.main section {
+  flex: 14;
+  position: relative;
+}
+.main section iframe {
+  width: 100%;
+  height: 100%;
+}
+.main section footer {
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #eceeeb;
+}
+.prompt-contain {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.prompt-contain .meg {
+  margin-top: -150px;
+  width: 430px;
+  height: 220px;
+  background: white;
+}
+.prompt-contain .meg .top {
+  border-bottom: 1px solid darkgray;
+  font-size: 20px;
+  background: darkgray;
+}
+.prompt-contain .meg .top h5 {
+  margin: 0;
+  padding: 20px;
+}
+.prompt-contain .meg .context {
+  padding: 20px;
+}
+.prompt-contain .meg .context i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.prompt-contain .meg .tell button {
+  float: right;
+  padding: 4px;
+  width: 70px;
+  height: 50px;
+  font-size: 16px;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 /*# sourceMappingURL=index.css.map */

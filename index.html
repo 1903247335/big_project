@@ -4,8 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Title</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
 
+</head>
+<body style="overflow: hidden;position: relative">
+    <header>
+            <div class="top">
+                <div class="logo"><img src="images/logo.png" alt=""></div>
+                <div class="user-operation">
+                    <div class="person">
+
+                        <div class="mouse">
+                            <img src="./images/test.jpeg" alt="">
+                            <a href="JavaScript:;" class="link_center">
+                                <p style="display: inline-block">个人中心</p>
+                                <i class="iconfont icon-Chevron-down"></i>
+                            </a>
+                            <ul class="person-center">
+                                <li><a href="#">基本资料</a></li>
+                                <li><a href="#">更换头像</a></li>
+                                <li><a href="#">重置密码</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="btn">
+                        <i class="iconfont icon-guanji"></i>
+                        <a href="javascript:;" class="exit">退出</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <div class="main">
+        <aside>
+            <div class="top">
+                <div class="head-portrait">
+                    <img src="./images/test.jpeg" alt="">
+                </div>
+                <span class="welcome-meg" style="color: whitesmoke">欢迎<p id="name">用户</p></span>
+            </div>
+
+            <ul>
+                <li class="now-place">
+                    <a href="./home/info.html"  class="start">
+                        <span>
+                            <i class="iconfont icon-fangzi"></i>首页
+                        </span>
+                    </a>
+
+                </li>
+                <li class="choose">
+
+                    <a href="javascript:;">
+                        <span>
+                            <i class="iconfont icon-bianjiwenzhang_huaban"></i>文章管理
+                        </span>
+                        <i class="iconfont icon-Chevron-down"></i></a>
+                    <dl class="article-control">
+                        <dd><a href="javascript:;">文章类别</a></dd>
+                        <dd><a href="javascript:;">文章列表</a></dd>
+                        <dd><a href="javascript:;">发布文章</a></dd>
+                    </dl>
+                </li>
+                <li class="choose">
+                    <a href="javascript:;"><span><i class="iconfont icon-yonghu"></i>个人中心</span><i class="iconfont icon-Chevron-down"></i></a>
+                    <dl class="person-central">
+                        <dd><a href="#">基本资料</a></dd>
+                        <dd><a href="#">更换头像</a></dd>
+                        <dd><a href="#">重置密码</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </aside>
+        <section>
+            <iframe name="fm"></iframe>
+            <footer>@www.itheima.com - 黑马程序员</footer>
+        </section>
+    </div>
+    <div class="prompt-contain">
+        <div class="meg">
+            <div class="top">
+                <h5>提示</h5>
+            </div>
+            <div class="context">
+
+                <p><i class="iconfont icon-jinggao"></i>确定要退出吗?</p>
+            </div>
+            <div class="tell clearfix">
+                <button class="cancel">取消</button>
+
+                <button style="background: #2b76b9" class="determine">确定</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
