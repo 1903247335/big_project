@@ -59,16 +59,23 @@ function tell_fail() {
 }
 
 function avatar(user) {
+    console.log(user)
     if (user['data'].nickname===''){
         $('#name').text(user['data'].username)
     }
-    else {$('#name').text(user['data'].nickname)}
+    else {
+        $('#name').text(user['data'].nickname)
+
+    }
 }
+
 function obtain_info() {
     $.ajaxPrefilter(function (res) {//设置默认路径
         res.url='http://www.liulongbin.top:3007'+res.url
     })
     $.ajax({type:'GET',url:'/my/userinfo',headers:{Authorization:localStorage.getItem('token')},success:function (res) {
+            $('.head-portrait img').attr('src',res['data']['user_pic'])//获取头像
+            $('.mouse img').attr('src',res['data']['user_pic'])
             res['status']===0?avatar(res):tell_fail()//身份认证
 
         }})
@@ -88,5 +95,8 @@ $(function () {
         })
     })
 })
+function pagereload() {
+    location.reload()
+}
 
 

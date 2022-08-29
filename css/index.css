@@ -151,6 +151,9 @@ header .top .person .person-center a {
 header .top .person .mouse a {
   display: inline-block;
 }
+header .top .person .mouse img {
+  border-radius: 50%;
+}
 header .top .person img {
   width: 60px;
   height: 60px;
