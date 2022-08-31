@@ -74,9 +74,14 @@ function obtain_info() {
         res.url='http://www.liulongbin.top:3007'+res.url
     })
     $.ajax({type:'GET',url:'/my/userinfo',headers:{Authorization:localStorage.getItem('token')},success:function (res) {
-            $('.head-portrait img').attr('src',res['data']['user_pic'])//获取头像
-            $('.mouse img').attr('src',res['data']['user_pic'])
-            res['status']===0?avatar(res):tell_fail()//身份认证
+            if (res['status']===0){//身份验证
+                avatar(res)
+                $('.head-portrait img').attr('src',res['data']['user_pic'])//获取头像
+                $('.mouse img').attr('src',res['data']['user_pic'])
+            }
+            else {tell_fail()}
+
+
 
         }})
 }
